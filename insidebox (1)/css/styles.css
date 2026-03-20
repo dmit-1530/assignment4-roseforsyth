@@ -1,3 +1,127 @@
+:root {
+    --blue: #0A91DE;
+    --grey: #666F74;
+    --light-grey: #DDDDDD;
+    --logo-grey: #727B81;
+}
+
+/* Global typography */
 body {
     background-color: #eee;
+    font-family: "Manrope", sans-serif;
+    color: var(--grey);
+    display: flex;
+}
+
+/* Utilities */
+
+
+.inner-container {
+    margin: auto;
+    max-width: 1440px;
+}
+
+.main-level {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+    padding: 0;
+}
+
+/* Type */
+
+
+h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.25rem;
+}
+
+span {
+    color: var(--blue);
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 0.0625 solid var(--light-grey);
+    padding: .5rem 0;
+}
+
+.main-level li {
+    display: flex;
+    position: relative;
+}
+
+a {
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+
+}
+
+a:visited {
+    color: var(--grey);
+}
+
+a:hover,
+a:focus {
+    font-weight: bold;
+}
+
+/* Components */
+
+
+header {
+    background-color: #fff;
+    color: var(--grey);
+    border: 0.0625 solid var(--light-grey);
+    padding: 1rem;
+    width: 14.5rem;
+}
+
+svg {
+    color: var(--grey);
+    height: 1.6875rem;
+}
+
+.main-level li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.dropdown-nav {
+    background-color: #fff;
+    position: absolute;
+    left: 9.625rem;
+    top: -1.125rem;
+    min-width: 174px;
+    border: 0.0625rem solid var(--blue);
+    border-radius: .4375rem;
+    box-shadow: var(--light-grey);
+    z-index: 1;
+    visibility: 0;
+    opacity: 0;
+}
+
+.dropdown-nav li {
+    font-size: 1.125rem;
+    padding: 0.5rem 0;
+    margin: 0.5rem 1.125rem;
+    border-bottom: 0.0625rem solid #ddd;
+}
+
+
+.dropdown-nav li:hover a,
+.main-level li:hover svg path {
+    color: var(--blue);
+    font-weight: bold;
+
+}
+
+.main-level li:hover .dropdown-nav {
+    visibility: visible;
+    opacity: 1;
 }
